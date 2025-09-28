@@ -1,0 +1,525 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+   font-family: 'Poppins', sans-serif;
+  background-color: white;
+  color: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #fff;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 230px;
+}
+
+
+.logopic{
+    width: 50px;
+    border-radius: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;   
+  color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-style: oblique;
+  font-weight: 100;
+   transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+  background-color: orange;             
+}
+
+.nav-links {
+  display: flex;              /* ✅ Keep visible on desktop */
+  gap: 20px;
+  position: static;           /* no fixed positioning on desktop */
+  height: auto;
+  width: auto;
+  background: none;
+  flex-direction: row;        /* row layout for desktop */
+  justify-content: flex-end;
+  align-items: center;
+  transition: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: orange;
+}
+
+.hamburger {
+  display: none;              /* hidden on desktop */
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
+/* Nav links style in mobile */
+.nav-links a {
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+  background-color: orange;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+
+/* Hamburger icon */
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  z-index: 1001; 
+}
+
+/* Preloader styling */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+#preloader h2{
+    position: absolute;
+      border-radius: 50%;
+      animation: float 10s infinite ease-in-out;
+      animation: fadeInOut 2s infinite;
+      color: #ff8c00;
+      font-size: 40px;
+      margin-right: 80px;
+}
+
+.loader-logo {
+  width: 400px; 
+  animation: fadeInOut 2s infinite;
+  height: 400px;
+  border-radius: 50%;
+}
+
+/* Simple fade animation */
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+
+.dots {
+      display: flex;
+      gap: 8px;
+      animation: fadeInOut 2s infinite;
+}
+
+.dot {
+      width: 12px;
+      height: 12px;
+      background: #ff8c00;
+      border-radius: 50%;
+      animation: bounce 1s infinite ease-in-out;
+}
+
+.dot:nth-child(2) {
+      animation-delay: 0.2s;
+}
+.dot:nth-child(3) {
+      animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+ 0%, 80%, 100% {
+        transform: scale(0.6);
+        opacity: 0.5;
+}
+ 40% {
+        transform: scale(1);
+        opacity: 1;
+}
+ }
+
+.shipment{
+  padding: 150px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background: white;
+}
+
+.shipstatus {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.shipstatus div {
+  flex: 1;
+  margin: 10px;
+  padding: 30px;
+  background: whitesmoke;
+  border-radius: 5px;
+}
+
+.shipstatus div h3{
+    color: #666;
+}
+
+.shipstatus div p{
+    color: #111;
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.box {
+  flex: 1;
+  margin: 20px;
+  padding:30px ;
+  background: whitesmoke;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.box h3{
+    margin-bottom: 20px;
+}
+
+.box{
+    line-height: 30px;
+}
+
+.livemap{
+    padding: 50px;
+    text-align: center;
+}
+
+.livemap h2{
+margin-bottom: 20px;
+}
+
+ .map-container {
+      width: 100%;
+      height: 600px; /* adjust height as you like */
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+      iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .tracking-history {
+  /* max-width: 700px; */
+  margin: 20px auto;
+  padding: 15px;
+  text-align: left;
+  /* background: white; */
+  /* border-radius: 6px; */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.tracking-history h2{
+align-items: center;
+text-align: center;
+}
+
+.tracking-history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tracking-history li {
+  padding: 12px;
+  /* border-left: 4px solid #004080; */
+  margin: 10px 0;
+  /* background: #f8f9fc; */
+  border-radius: 4px;
+}
+
+.tracking-history a{
+text-align: center;
+text-decoration: none;
+}
+
+.footercontent{
+  display: flex;
+    flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding: 100px;
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.footercolumn {
+  min-width: 200px;
+}
+
+.footercolumn ul{
+  list-style-type: none;
+}
+
+.footercolumn h3{
+  font-size: 30px;
+  font-style: italic;
+  color: white;
+}
+
+.footercolumn p{
+  color: white;
+}
+
+.footercolumn h4 {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.footercolumn ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: white;
+}
+
+.social-icons a {
+   flex: 10px;
+  padding:10px ;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  margin-right: 10px;
+  transition:  0.3s ease, color 0.3s ease;
+}
+
+.social-icons a :hover {
+  transform: scale(1.5);
+  color: orange;
+}
+
+.footercolumn ul li i{
+  color: #ff8c00;
+  margin-right: 10px;
+}
+
+hr{
+  border: 1px thin white;
+}
+
+.IBH{
+   background-color: #333;
+   padding: 15px;
+   font-size: 15px;
+   text-align: center;
+   border-radius: 5px;
+   color: white;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ========== Tablets (max-width: 1024px) ========== */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 25px;
+  }
+
+  .logo {
+    font-size: 22px;
+    margin-right: 100px;
+  }
+
+  .shipstatus {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details {
+    flex-direction: column;
+  }
+
+  .box {
+    margin: 15px 0;
+  }
+
+  .map-container {
+    height: 400px;
+  }
+
+  .footercontent {
+    padding: 50px;
+  }
+}
+
+/* ========== Mobile Landscape & Small Tablets (max-width: 768px) ========== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    z-index: 1002;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 60vh;
+    width: 80%;
+    background: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .logo {
+    font-size: 20px;
+    margin-right: 0;
+  }
+
+  .shipment {
+    padding: 100px 30px;
+  }
+
+  .shipstatus div {
+    margin: 10px 0;
+    padding: 20px;
+  }
+
+  .footercontent {
+    flex-direction: column;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* ========== Mobile Portrait (max-width: 480px) ========== */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .loader-logo {
+    width: 200px;
+    height: 200px;
+  }
+
+  #preloader h2 {
+    font-size: 24px;
+    margin-right: 0;
+  }
+
+  .shipment {
+    padding: 80px 15px;
+  }
+
+  .shipstatus div p {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .box {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .livemap {
+    padding: 20px;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+
+  .tracking-history {
+    padding: 10px;
+  }
+
+  .footercontent {
+    padding: 20px;
+  }
+
+  .footercolumn h3 {
+    font-size: 22px;
+  }
+
+  .footercolumn h4 {
+    font-size: 16px;
+  }
+
+  .IBH {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>edit tracking</title>
+  <link rel="stylesheet" href="settings.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">CargoCraft Admin</div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="create.html">Create Tracking</a>
+      <a href="manage.html">Manage Tracking</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">
+      ☰
+    </div>
+  </header>
+
+  <!-- Preloader -->
+<div id="preloader">
+  <img src="images/logo.jpg" alt="Logo" class="loader-logo">
+  <h2>CargoCraft Services</h2>
+
+   <div class="dots">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</div>
+
+<!-- Your Website Content -->
+<div id="content" style="display:none;">
+  <!-- All your website content here -->
+</div>
+
+
+  <section class="hero">
+    <div class="user">
+      <h4>Welcome, admin!</h4>
+      <button class="logout">Logout</button>
+    </div>
+  </section>
+
+   <div class="create">
+    <h1>Settings</h1>
+   </div>
+
+  <div class="container">
+
+    <h2>Update Password</h2>
+
+    <form>
+
+     <div class="form-group">
+  <label for="password">Current Password</label>
+  <div class="password-wrapper">
+    <input type="password" 
+           id="password" 
+           name="password" 
+           minlength="6" 
+           placeholder="Enter Current password" 
+           required>
+    <button><i class="fa-solid fa-eye" id="togglePassword"></i></button>
+  </div>
+</div>
+
+     <div class="form-group">
+  <label for="password">New Password</label>
+  <div class="password-wrapper">
+    <input type="password" 
+           id="password" 
+           name="password" 
+           minlength="6" 
+           placeholder="Enter New password" 
+           required>
+    <button><i class="fa-solid fa-eye" id="togglePassword"></i></button>
+  </div>
+</div>
+
+     <div class="form-group">
+  <label for="password">Confirm Password</label>
+  <div class="password-wrapper">
+    <input type="password" 
+           id="password" 
+           name="password" 
+           minlength="6" 
+           placeholder="Confirm password" 
+           required>
+    <button><i class="fa-solid fa-eye" id="togglePassword"></i></button>
+  </div>
+</div>
+      <button class="closebtn">Update Password</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <h2>Update Email</h2>
+
+    <form action="">
+        <div class="form-group">
+        <label for="Current Email">Current Email</label>
+        <input type="email" id="sender-email" name="sender-email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="New Email">New Email</label>
+        <input type="email" id="sender-email" name="sender-email" required>
+      </div>
+      <button class="closebtn">Update Email</button>
+    </form>
+  </div>
+
+  <script>
+    // function toggleMenu() {
+    //   document.getElementById("navLinks").classList.toggle("show");
+    // }
+    function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('active');
+  document.getElementById('overlay').classList.toggle('active');
+}
+
+// Wait until page loads completely
+  window.addEventListener("load", function(){
+    setTimeout(() => {
+      document.getElementById("preloader").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    }, 2000); // 2000ms = 2 seconds (adjust time)
+  });
+
+   const togglePassword = document.querySelector("#togglePassword");
+  const password = document.querySelector("#password");
+
+  togglePassword.addEventListener("click", function () {
+    // switch between password and text
+    const type = password.getAttribute("type") === "password" ? "text" : "password";
+    password.setAttribute("type", type);
+
+   // toggle between eye and eye-slash
+    this.classList.toggle("fa-eye");
+    this.classList.toggle("fa-eye-slash");
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>edit tracking</title>
+  <link rel="stylesheet" href="edit.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">CargoCraft Admin</div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="create.html">Create Tracking</a>
+      <a href="manage.html">Manage Tracking</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">
+      ☰
+    </div>
+  </header>
+
+  <!-- Preloader -->
+<div id="preloader">
+  <img src="images/logo.jpg" alt="Logo" class="loader-logo">
+  <h2>CargoCraft Services</h2>
+
+   <div class="dots">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</div>
+
+<!-- Your Website Content -->
+<div id="content" style="display:none;">
+  <!-- All your website content here -->
+</div>
+
+
+  <section class="hero">
+    <div class="user">
+      <h4>Welcome, admin!</h4>
+      <button class="logout">Logout</button>
+    </div>
+  </section>
+
+   <div class="create">
+    <h1>Edit Tracking: TRK-MQFY35K77IHP</h1>
+   </div>
+
+  <div class="container">
+    <!-- <h1>Create New Tracking</h1> -->
+
+    <h2>Tracking Details</h2>
+
+    <form>
+        <div class="form-group">
+        <label for="Tracking Number ">Tracking Number <span>*</span></label>
+        <input type="text" id="" name="" required>
+      </div>
+
+      <h2>Sender Details</h2>
+
+      <div class="form-group">
+        <label for="sender-name">Sender Name <span>*</span></label>
+        <input type="text" id="sender-name" name="sender-name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="sender-phone">Sender Phone Number</label>
+        <input type="tel" id="sender-phone" name="sender-phone">
+      </div>
+
+      <div class="form-group">
+        <label for="sender-email">Sender Email <span>*</span></label>
+        <input type="email" id="sender-email" name="sender-email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="sender-Address">Sender Address</label>
+        <input type="address" id="sender-address" name="sender-address">
+      </div>
+      <br>
+
+      <h2>Package Details</h2>
+
+      <div class="form-group">
+        <label for="Dispatch Location">Dispatch Location <span>*</span></label>
+        <input type="text" id="sender-name" name="sender-name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="Current Location">Current Location</label>
+        <input type="address" id="Location-address" name="Location-address">
+      </div>
+
+      <div class="form-group">
+        <label for="Package Weight">Package Weight (kg)</label>
+        <input type="tel" id="sender-phone" name="sender-phone">
+      </div>
+
+      <div class="form-group">
+        <label for="shipping Amount">Shipping Amount</label>
+        <input type="text" id="" name="" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="Price">Price (value of package) </label>
+        <input type="text" id="sender-address" name="sender-address">
+      </div>
+      <br>
+
+      <h2>Receiver Details</h2>
+
+      <div class="form-group">
+        <label for="Receiver-name">Receiver Name <span>*</span></label>
+        <input type="text" id="sender-name" name="sender-name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="Receiver-phone">Receiver Phone Number</label>
+        <input type="tel" id="sender-phone" name="sender-phone">
+      </div>
+
+      <div class="form-group">
+        <label for="Receiver-email">Receiver Email <span>*</span></label>
+        <input type="email" id="sender-email" name="sender-email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="Receiver Address">Receiver Address</label>
+        <input type="address" id="sender-address" name="sender-address">
+      </div>
+
+      <div class="form-group">
+        <label for="Receiver Country">Receiver Country</label>
+        <input type="address" id="sender-address" name="sender-address">
+      </div>
+      <br>
+
+         <h2>Timeline & Status</h2>
+
+      <div class="form-group">
+        <label for="Dispatch Date">Dispatch Date <span>*</span></label>
+        <input type="date" id="send-date" name="send-date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="Estimated Delivery Date">Estimated Delivery Date <span>*</span></label>
+        <input type="date" id="Delivery-date" name="Delivery-date">
+      </div>
+
+      <div class="form-group">
+        <label for="Status">Status<span>*</span></label>
+          <select id="status" name="status" required>
+        <option value="">-- Select Status --</option>
+        <option value="active">Active</option>
+        <option value="pending">Pending</option>
+        <option value="in-transit">In Transit</option>
+        <option value="delivered">Delivered</option>
+        <option value="cancelled">Cancelled</option>
+        </select>
+      </div>
+      <br>
+      <button class="closebtn">Create Tracking</button>
+      <a href="manage.html" class="link">Back to Manage Tracking</a>
+    </form>
+  </div>
+
+  <script>
+    // function toggleMenu() {
+    //   document.getElementById("navLinks").classList.toggle("show");
+    // }
+    function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('active');
+  document.getElementById('overlay').classList.toggle('active');
+}
+
+// Wait until page loads completely
+  window.addEventListener("load", function(){
+    setTimeout(() => {
+      document.getElementById("preloader").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    }, 2000); // 2000ms = 2 seconds (adjust time)
+  });
+  </script>
+</body>
+</html>

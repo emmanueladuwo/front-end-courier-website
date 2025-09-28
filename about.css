@@ -1,0 +1,599 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+   font-family: 'Poppins', sans-serif;
+  background-color: whitesmoke;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #fff;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 230px;
+}
+
+
+.logopic{
+    width: 50px;
+    border-radius: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;   
+  color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-style: oblique;
+  font-weight: 100;
+   transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+  background-color: orange;             
+}
+
+.nav-links {
+  display: flex;              /* ✅ Keep visible on desktop */
+  gap: 20px;
+  position: static;           /* no fixed positioning on desktop */
+  height: auto;
+  width: auto;
+  background: none;
+  flex-direction: row;        /* row layout for desktop */
+  justify-content: flex-end;
+  align-items: center;
+  transition: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: orange;
+}
+
+.hamburger {
+  display: none;              /* hidden on desktop */
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* When active, slide in */
+/* .nav-links.active {
+  right: 0;
+} */
+
+/* Nav links style in mobile */
+.nav-links a {
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+  background-color: orange;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+
+/* Hamburger icon */
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  z-index: 1001; 
+}
+
+.aboutsky{
+    font-family: 'Poppins', sans-serif;
+    padding: 90px;
+    text-align: center;
+}
+
+.hero{
+    margin-top: 40px;
+}
+
+.hero h2{
+    font-size: 50px;
+   font-style: italic;
+   color:#ff8c00 ;
+}
+
+.hero p{
+     font-size: 17px;
+    font-style: italic;
+    color: #333;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: whitesmoke;
+}
+
+.abouttext {
+  flex: 1;
+  padding-right: 30px;
+  color: #333;
+  margin-left: 30px;
+}
+
+.abouttext h2 {
+  font-size: 50px;
+  color: #ff8c00;
+  margin-bottom: 20px;
+}
+
+.abouttext p {
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.hero-image img {
+  max-width: 550px;
+  border-radius: 8px;
+  transition: ease 0.3s;
+  margin-right: 20px;
+}
+
+.hero-image img:hover{
+    transform: translateY('-5px');
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 70px;
+  gap: 20px;
+}
+
+.service-box {
+  background: white;
+  padding: 30px;
+  flex: 1;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Icon */
+.service-box  i{
+  font-size: 50px;
+  color:#ff8c00 ;
+  margin-bottom: 30px;
+}
+
+/* Titles */
+.service-box h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+
+.service-box p {
+  font-size: 15px;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.core{
+    text-align: center;
+    padding: 30px;
+    font-size: 40px;
+    color: #ff8c00;
+}
+
+.valuebox{
+  background: white;
+  padding: 20px 30px;
+  flex: 1;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.valuebox:hover {
+  transform: translateY(-5px);
+}
+
+/* Icon */
+.valuebox  i{
+  font-size: 50px;
+  color:#ff8c00 ;
+  margin-bottom: 30px;
+}
+
+/* Titles */
+.valuebox h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+
+.valuebox p {
+  font-size: 15px;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.freequote{
+  background-color: #666;
+  padding: 80px;
+  border-radius: 20px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.quote{
+  text-align: center;
+}
+
+.quote h1{
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+.quote p{
+  font-size: 20px;
+}
+
+.quote a{
+  background: #ff8c00;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.quote a:hover{
+  background: orange;
+}
+
+.footercontent{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding: 100px;
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.footercolumn {
+  min-width: 200px;
+}
+
+.footercolumn ul{
+  list-style-type: none;
+}
+
+.footercolumn h3{
+  font-size: 30px;
+  font-style: italic;
+}
+
+.footercolumn h4 {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.footercolumn ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.social-icons a {
+   flex: 10px;
+  padding:10px ;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  margin-right: 10px;
+  transition:  0.3s ease, color 0.3s ease;
+}
+
+.social-icons a :hover {
+  transform: scale(1.5);
+  color: orange;
+}
+
+.footercolumn ul li i{
+  color: #ff8c00;
+  margin-right: 10px;
+}
+
+hr{
+  border: 1px thin white;
+}
+
+.IBH{
+   background-color: #333;
+   padding: 15px;
+   font-size: 15px;
+   text-align: center;
+   border-radius: 5px;
+}
+
+/* Preloader styling */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+#preloader h2{
+    position: absolute;
+      border-radius: 50%;
+      animation: float 10s infinite ease-in-out;
+      animation: fadeInOut 2s infinite;
+      color: #ff8c00;
+      font-size: 40px;
+      margin-right: 80px;
+}
+
+.loader-logo {
+  width: 400px; 
+  animation: fadeInOut 2s infinite;
+  height: 400px;
+  border-radius: 50%;
+}
+
+/* Simple fade animation */
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+
+    .dots {
+      display: flex;
+      gap: 8px;
+      animation: fadeInOut 2s infinite;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      background: #ff8c00;
+      border-radius: 50%;
+      animation: bounce 1s infinite ease-in-out;
+    }
+
+    .dot:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    .dot:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes bounce {
+      0%, 80%, 100% {
+        transform: scale(0.6);
+        opacity: 0.5;
+      }
+      40% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .reveal {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .loader-logo {
+    width: 250px;
+    height: 250px;
+  }
+
+  #preloader h2 {
+    font-size: 28px;
+    margin-right: 40px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .loader-logo {
+    width: 180px;
+    height: 180px;
+  }
+
+  #preloader h2 {
+    font-size: 20px;
+    margin-right: 20px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* Tablets and below */
+@media (max-width: 1024px) {
+  .logo {
+    margin-right: 0;
+    font-size: 22px;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    margin: 0 auto 20px auto;
+  }
+
+  .abouttext {
+    margin: 0;
+    padding: 0;
+  }
+
+  .services {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .service-box, .valuebox {
+    flex: 1 1 45%;
+    margin: 10px;
+  }
+
+  .quote h1 {
+    font-size: 36px;
+  }
+
+  .quote p {
+    font-size: 16px;
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+.hamburger {
+    display: block;
+    z-index: 1002;            /* sits above overlay */
+  }
+
+  /* .navbar {
+    position: static;
+  } */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 60vh;
+    width: 80%;
+    background-color: #eee;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: right 0.4s ease-in-out;
+    z-index: 1001;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .aboutsky {
+    padding: 60px 20px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .services {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .service-box, .valuebox {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .freequote {
+    padding: 40px 20px;
+  }
+
+  .quote h1 {
+    font-size: 28px;
+  }
+
+  .footercontent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .footercolumn {
+    margin-bottom: 20px;
+  }
+}

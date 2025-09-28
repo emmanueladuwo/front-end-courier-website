@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">CargoCraft Admin</div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="create.html">Create Tracking</a>
+      <a href="manage.html">Manage Tracking</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">
+      ☰
+    </div>
+  </header>
+
+  <!-- Preloader -->
+<div id="preloader">
+  <img src="images/logo.jpg" alt="Logo" class="loader-logo">
+  <h2>CargoCraft Services</h2>
+
+   <div class="dots">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</div>
+
+<!-- Your Website Content -->
+<div id="content" style="display:none;">
+  <!-- All your website content here -->
+</div>
+
+  <section class="hero">
+    <div class="user">
+      <h4>Welcome, admin!</h4>
+      <button class="logout">Logout</button>
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main class="dashboard">
+    <h2>Dashboard Overview</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Total Packages</h3>
+        <p class="count">3</p>
+        <i class="fas fa-box icon blue"></i>
+      </div>
+
+      <div class="card">
+        <h3>Delivered</h3>
+        <p class="count">0</p>
+        <i class="fas fa-check-circle icon green"></i>
+      </div>
+
+      <div class="card">
+        <h3>In Transit/Pending</h3>
+        <p class="count">1</p>
+        <i class="fas fa-truck icon yellow"></i>
+      </div>
+
+      <div class="card">
+        <h3>On Hold</h3>
+        <p class="count">1</p>
+        <i class="fas fa-hand-paper icon red"></i>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <section class="updates">
+      <h2>Recent Tracking Updates</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tracking Number</th>
+            <th>Receiver Name</th>
+            <th>Status</th>
+            <th>Last Update</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>TRK-MQFY35K77IHP</td>
+            <td>Mochalin Alexander</td>
+            <td><span class="badge active">ACTIVE</span></td>
+            <td>2025-08-15 09:44:19</td>
+          </tr>
+          <tr>
+            <td>TRK-81NDGFWSBSRM</td>
+            <td>Robin Sutphin</td>
+            <td><span class="badge hold">ON HOLD</span></td>
+            <td>2025-07-21 02:07:24</td>
+          </tr>
+          <tr>
+            <td>TRK-8REHNNRVLOX2</td>
+            <td>Victor</td>
+            <td><span class="badge transit">IN TRANSIT</span></td>
+            <td>2025-06-10 12:46:21</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+
+  <script>
+    // function toggleMenu() {
+    //   document.getElementById("navLinks").classList.toggle("show");
+    // }
+    function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('active');
+  document.getElementById('overlay').classList.toggle('active');
+}
+
+// Wait until page loads completely
+  window.addEventListener("load", function(){
+    setTimeout(() => {
+      document.getElementById("preloader").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    }, 2000); // 2000ms = 2 seconds (adjust time)
+  });
+  </script>
+</body>
+</html>

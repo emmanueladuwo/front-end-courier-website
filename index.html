@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- header -->
+<header class="navbar">
+  <img class="logopic" src="images/logo.jpg" alt="">
+  <div class="logo">CargoCraft Services</div>
+
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html"><h3>Home</h3></a>
+    <a href="service.html"><h3>Services</h3></a>
+    <a href="about.html"><h3>About Us</h3></a>
+    <a href="trackparcel.html"><h3>Track Parcel</h3></a>
+    <a href="contact.html"><h3>Contact</h3></a>
+  </nav>
+</header>
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+<!-- Preloader -->
+<div id="preloader">
+  <img src="images/logo.jpg" alt="Logo" class="loader-logo">
+  <h2>CargoCraft Services</h2>
+
+   <div class="dots">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</div>
+
+<!-- Your Website Content -->
+<div id="content" style="display:none;">
+</div>
+
+
+
+
+    hero Section
+  <section class="hero">
+    <div class="herotexts">
+    <h1>Your Global Logistics Partner</h1>
+    <br><br>
+    <p>Connecting businesses and people with fast, reliable, and secure freight solutions worldwide.</p>
+    <br><br><br>
+     <a href="trackparcel.html" class="herobtn1">Track Your Shipment</a>
+     <a href="service.html" class="herobtn2">Our Services</a>
+    </div>
+  </section>
+
+  <!-- Next section -->
+   <section class="whychoose reveal">
+    <h1>Why Choose CargoCraft Services?</h1>
+    <div class="infobox">
+      <div class="statbox">
+        <i class="fa-solid fa-truck-fast"></i>
+        <h3>Fast Delivery</h3>
+        <p class="label">Expedited shipping options to ensure your parcels reach their destination on time, every time.</p>
+      </div>
+      <div class="statbox">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h3>Secure Handling</h3>
+        <p class="label">Your goods are handled with the utmost care and security from dispatch to delivery.</p>
+      </div>
+      <div class="statbox">
+        <i class="fa-solid fa-earth-americas"></i>
+        <h3>Global Reach</h3>
+        <p class="label">Extensive network covering major cities and remote areas across the globe.</p>
+      </div>
+      <div class="statbox">
+        <i class="fa-solid fa-headset"></i>
+        <h3>24/7 Support</h3>
+        <p class="label">Our dedicated customer service team is always ready to assist you, day or night.</p>
+       </div>
+    </div>
+   </section>
+
+   <section class="about reveal">
+    <div class="abouttext">
+      <h2>About CargoCraft Services</h2>
+      <p>
+        At CargoCraft Services, we pride ourselves on delivering excellence in logistics. 
+        With years of experience, we’ve built a reputation for reliability, efficiency, 
+        and customer satisfaction.
+      </p>
+      <br>
+      <p>
+        Our mission is to simplify complex shipping challenges, providing tailored 
+        solutions that meet the unique needs of every client, from small businesses 
+        to large corporations.
+      </p>
+      <br>
+      
+       <a href="about.html" class="btn">Learn More About Us</a>
+    </div>
+    
+    <div class="hero-image">
+      <img src="images/deliveryvan.webp" alt="Delivery van">
+    </div>
+    </section>
+
+     <section class="about reveal">
+    <div class="abouttext">
+      <h2>Comprehensive Logistics Solutions</h2>
+      <p>
+        From express parcel delivery to large-scale freight forwarding, Sky Wing Express
+         offers a full suite of logistics services designed to optimize your supply chain.
+      </p>
+      <br>
+      <p>
+        We leverage cutting-edge technology and a vast network of partners to ensure
+        seamless operations and timely deliveries, no matter the cargo or destination.
+      </p>
+      <br>
+      <a href="service.html" class="btn">Explore Our Services</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="images/logistics.jpg" alt="logistics">
+    </div>
+  </section>
+
+  <section class="freequote reveal">
+    <div class="quote">
+    <h1>Ready to Ship with Confidence?</h1>
+    <br>
+    <p>Experience the CargoCraft Services difference. Get a quote or talk to our experts today for a customized logistics plan.</p>
+    <br><br>
+    <a href="contact.html">Get a Free Qoute</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footercontent reveal">
+      <div class="footercolumn">
+        <h3>CargoCraft Services</h3>
+        <br>
+        <p>Your trusted partner for fast, reliable, and secure </p>
+        <p>logistics solutions worldwide. We connect businesses </p>
+        <p>and people with care.</p>
+        <br><br>
+        <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      </div>
+
+      <div class="footercolumn">
+        <h4>Quick Links</h4>
+        <ul>
+          <li>Home</li>
+          <li>Services</li>
+          <li>About Us</li>
+          <li>Track Parcel</li>
+          <li>Contact US</li>
+        </ul>
+      </div>
+
+      <div class="footercolumn">
+        <h4>Contact Info</h4>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i>123 Logistics Way, Freight City, FG 12345</li>
+          <li><i class="fa-solid fa-phone"></i>On Request</li>
+          <li><i class="fa-solid fa-message"></i>support@cargocraftservices.com</li>
+          <li><i class="fa-solid fa-clock"></i>Mon - Sat: 8:00 AM - 6:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+      <div class="IBH">
+    © 2025 CargoCraft Services. All rights reserved.
+  </div>
+  </footer>
+  <script>
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('active');
+  document.getElementById('overlay').classList.toggle('active');
+}
+
+ // Wait until page loads completely
+  window.addEventListener("load", function(){
+    setTimeout(() => {
+      document.getElementById("preloader").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    }, 2000); // 2000ms = 2 seconds (adjust time)
+  });
+
+     const reveals = document.querySelectorAll(".reveal");
+
+  window.addEventListener("scroll", () => {
+    for (let i = 0; i < reveals.length; i++) {
+      let windowHeight = window.innerHeight;
+      let elementTop = reveals[i].getBoundingClientRect().top;
+      let elementVisible = 100;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      }
+      // 👆 no "remove" here, so it stays revealed
+    }
+  });
+</script>
+</body>
+</html>
